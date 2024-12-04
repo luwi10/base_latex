@@ -1,0 +1,45 @@
+% the following classes are the most common to use: article, report, book. For more customization you can use scrartcl, scrreprt, scrbook
+% some of the features of this document might not be available in other classes than scrbook
+\documentclass[headsepline,footsepline,footinclude=false,oneside,fontsize=11pt,paper=a4,listof=totoc,bibliography=totoc]{scrbook}
+
+\AtBeginDocument{
+    \hypersetup{
+        pdftitle=\getTitle,
+        pdfauthor=\getAuthor,
+    }
+}
+\title{\getTitle}
+\author{\getAuthor}
+\date{}
+
+% most common packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman,american]{babel}
+\usepackage{csquotes}
+\usepackage[sc]{mathpazo}
+\usepackage[final]{microtype}
+\usepackage{bm}
+\usepackage{amsmath,amsthm,amssymb,mathtools}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{subcaption}
+\usepackage[format=plain]{caption}
+\usepackage{booktabs}
+\usepackage{enumerate}
+\usepackage[
+  backend=biber,
+  url=false,
+  style=numeric,
+  maxnames=4,
+  minnames=3,
+  maxbibnames=99,
+  giveninits,
+  uniquename=init
+]{biblatex}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{ifthen}
+
+% this declaration must be after all the usepackage commands
+\bibliography{bibliography}

@@ -1,0 +1,34 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        // this enables the latex workshop extension to use the .latexmkrc file for the compilation. Please don't change this value
+        "latex-workshop.latex.recipe.default": "latexmk (latexmkrc)",
+        // the root file will always be the one that has the \begin{document} command make sure to have it in your top file
+        "latex-workshop.latex.rootFile.indicator": "\\begin{document}",
+        
+        "files.exclude": 
+            {
+                "**/*.aux": true,
+                "**/*.bbl": true,
+                "**/*.bcf": true,
+                "**/*.blg": true,
+                "**/*.fdb_latexmk": true,
+                "**/*.fls": true,
+                "**/*.log": true,
+                "**/*.out": true,
+                "**/*.run.xml": true,
+                "**/*.synctex.gz": true,
+                "**/*.toc": true,
+            },
+    
+        "latex-workshop.linting.chktex.enabled": true,
+        "latex-workshop.view.pdf.color.dark.backgroundColor": "#1f1f1f",
+        // this delay is set to avoid a bug that appears when the document is too big, 
+        // you can play around with this value to fit your needs
+        "latex-workshop.latex.watch.pdf.delay": 2000,
+    }
+}
